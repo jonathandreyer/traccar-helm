@@ -35,7 +35,7 @@ spec:
 {{- if .Values.mysql.enabled }}
       initContainers:
         - name: wait-for-db
-          image: "alpine:3.6"
+          image: "alpine:3.16"
           command:
             - 'sh'
             - '-c'
