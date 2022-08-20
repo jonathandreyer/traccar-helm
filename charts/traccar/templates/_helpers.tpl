@@ -60,3 +60,14 @@ Create the name of the service account to use
 {{- default "default" .Values.serviceAccount.name }}
 {{- end }}
 {{- end }}
+
+{{/*
+Set tag image. When tag version is not defined, used AppVersion with ubuntu tag.
+*/}}
+{{- define "traccar.image" -}}
+{{- if .Values.image.tag }}
+{{- printf "%s:%s" .Values.image.repository .Values.image.tag }}
+{{- else }}
+{{- printf "%s:%s-ubuntu" .Values.image.repository .Chart.AppVersion }}
+{{- end }}
+{{- end }}
