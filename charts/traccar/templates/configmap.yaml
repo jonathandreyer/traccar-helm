@@ -352,4 +352,10 @@ data:
         <entry key='sms.enable'>{{ .Values.traccar.sms.enable }}</entry>
 {{- end }}
 {{- end }}
+
+{{- if .Values.traccar.protocols }}
+{{- if .Values.traccar.protocols.enable }}
+        <entry key='protocols.enable'>{{ .Values.traccar.protocols.enable }}</entry>
+{{- end }}
+{{- end }}
     </properties>

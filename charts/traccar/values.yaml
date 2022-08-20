@@ -101,6 +101,8 @@ traccar:
   # status:
   #   timeout:
   # sms:
+  # protocols:
+  #   enable:
 
 mysql:
   enabled: true
