@@ -44,6 +44,9 @@ data:
 {{- if .Values.traccar.web.application }}
         <entry key='web.application'>{{ .Values.traccar.web.application }}</entry>
 {{- end }}
+{{- if .Values.traccar.web.url }}
+        <entry key='web.url'>{{ .Values.traccar.web.url }}</entry>
+{{- end }}
         <entry key='web.healthCheck'>false</entry>
 {{- end }}
 {{- if .Values.traccar.geocoder }}
